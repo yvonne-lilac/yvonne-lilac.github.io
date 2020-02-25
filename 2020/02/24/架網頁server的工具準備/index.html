@@ -75,7 +75,8 @@ function activateLightMode(){
 架一個server總之就是需要先選個<strong>語言</strong>，然後選一個合你語言的<strong>web框架</strong>，讓你寫程式可以直接叫人家寫好的函式庫(爽#<br>
 然後因為我們寫了語錄生成器，算是(對使用者)互動式(?)，所以要有一個<strong>關聯式資料庫的管理系統</strong>，和一個幫忙生成最終文件的<strong>渲染引擎</strong>
 <a id="more"></a>
-這樣(#<br>
+<br>
+...這樣(#<br>
 然後因為我還在用Windows系統，所以只講在Windows裡的安裝和使用
 
 <p><br><br><br></p>
@@ -100,7 +101,7 @@ function activateLightMode(){
 
 
 <h1>資料庫管理系統--SQLite</h1>
-<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/SQLite370.svg/1200px-SQLite370.svg.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="undefined" class="fancybox"><img id="cherrypy" style="zoom:60%; " data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/SQLite370.svg/1200px-SQLite370.svg.png" class="lazyload"></a>
+<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/SQLite370.svg/1200px-SQLite370.svg.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="undefined" class="fancybox"><img id="cherrypy" style="zoom:40%; " data-src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/SQLite370.svg/1200px-SQLite370.svg.png" class="lazyload"></a>
 聽說這個系統效率沒有很好，所以如果你要寫流量比較大的網站大概就不太適合
 不過因為我們對自己網站的低流量很有信心(欸)，所以就選了跟我一起寫這個網站的前輩沒玩過的SQLite
 雖然這部分不是我寫的但我覺得看起來還算好懂好用啦(不負責任#<br>
@@ -108,21 +109,21 @@ function activateLightMode(){
 <h2>SQLite安裝</h2>
 因為我們是用python寫server，所以這邊需要一個API接上python給的接口，我們選了<strong>apsw</strong>
 <h3>SQLite接python--apsw</h3>
-這裡雖然也可以用pip裝，不過我是直接去[這裡](https://rogerbinns.github.io/apsw/download.html)
+這裡雖然也可以用pip裝，不過我是直接去<a herf="https://rogerbinns.github.io/apsw/download.html">這裡</a>
 下載符合自己windows和python版本的.exe檔 (愛放哪放哪
 執行apsw，它就會幫你直接把SQLite的資料庫系統讀進記憶體
 
 <h2>使用SQLite</h2>
 可以直接先用command玩，試試看新增資料庫、顯示特定資料......之類的功能，大家自己去看docㄅ
 
-<p>然後一樣記得在python編輯器內<br><code>import apsw</code><br>一樣把SQLite和apsw的文件讀一讀<br>在你的server程式裡叫<code>apsw.Connection(file.db)</code>，就能用SQLite的函式庫了</p>
+<p>然後一樣記得在python編輯器內<code>import apsw</code><br>一樣把SQLite和apsw的文件讀一讀<br>在你的server程式裡叫<code>apsw.Connection(file.db)</code>，就能用SQLite的函式庫了</p>
 <h1>渲染引擎--Pyratem</h1>
 ((我叫它海盜##<br>
 海盜它沒有LOGO(喔
 
 <h2>Pyratem安裝</h2>
-確認你家python版本新於2.6 (不過剛都已經說要介於3.5到3.8之間了wwww
-[下載](http://www.simple-is-better.org/template/pyratemp-0.3.2.tgz)
+確認你家python版本新於2.6 (不過剛都已經說要介於3.5到3.8之間了wwww<br>
+<a herf="http://www.simple-is-better.org/template/pyratemp-0.3.2.tgz">下載</a>
 
 <h2>使用Pyratem</h2>
 下載完解壓縮完，記得打開資料夾找到一個叫<strong>pyratem.py</strong>的檔案把它移到你專案的資料夾裡
